@@ -1,7 +1,7 @@
 {
-  "name": "sit725-2023-t1-prac3",
+  "name": "sit725-2023-t1-prac4",
   "version": "1.0.0",
-  "description": "practice 3",
+  "description": "practice 4",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -9,9 +9,7 @@
   "author": "kasey",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongodb": "^4.4.1"
   }
 }
-
-
-
