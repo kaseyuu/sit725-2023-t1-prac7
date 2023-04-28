@@ -7,7 +7,7 @@ const createCat = (req, res) => {
         if (err) {
             res.json({ statusCode: 400, message: err });
         } else {
-            res.json({ statusCode: 200, data: result, message: 'Cat Successfully Added.' });
+            res.json({ statusCode: 200, data: result, message: 'Cat successfully added.' });
         }
     });
 }
@@ -16,9 +16,21 @@ const getAllCats = (req, res) => {
         if (err) {
             res.json({ statusCode: 400, message: err });
         } else {
-            res.json({ statusCode: 200, data: result, message: 'Successfully Added.' });
+            res.json({ statusCode: 200, data: result, message: 'Success.' });
         }
     });
 }
 
-module.exports = { createCat, getAllCats };
+const deleteCat = (req, res) => {
+    let cat = req.body;
+    model.remove(cat, (err, result) => {
+        console.log(err)
+        if (err) {
+            res.json({ statusCode: 400, message: err });
+        } else {
+            res.json({ statusCode: 200, data: result, message: 'Cat removed.' });
+        }
+    });
+}
+
+module.exports = { createCat, getAllCats, deleteCat };
