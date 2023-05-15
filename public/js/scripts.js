@@ -61,6 +61,11 @@ const addCards = (items) => {
     });
 }
 
+let socket = io();
+socket.on('number', (msg) => {
+    console.log('Random number: ' + msg);
+})
+
 
 
 $(document).ready(function () {
